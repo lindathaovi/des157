@@ -89,17 +89,13 @@ li a:hover {
     position: fixed;
     height: 150px;
     padding-left: 25px;
+    margin-top: -150px;
+    text-align: left;
 }
 
 .bannercon {
     width: 100%;
     text-align: center;
-}
-
-#banner {
-    background: #ffd1c9;
-    height: 250px;
-    width: 800px;
     margin-top: 150px;
 }
 
