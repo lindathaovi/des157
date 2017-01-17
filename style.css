@@ -1,8 +1,13 @@
+/*note to self eric meyer reset*/
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
 body {
     font-family: "didot", "Georgia", serif;
     text-transform: uppercase;
-    margin: 0px;
-    padding: 0px;
 }
 
 h1 {
