@@ -10,9 +10,18 @@ function draw() {
 
     background(255); //white bg
 
-    //Happy face appears when mouse is pressed
+    //grey background stripes
     if (mouseIsPressed == true) {
         //winking face circle
+        fill("#787878");
+        rect(0, 15, 800, 20);
+        rect(0, 55, 800, 20);
+        rect(0, 95, 800, 20);
+        rect(0, 135, 800, 20);
+        rect(0, 175, 800, 20);
+        rect(0, 215, 800, 20);
+
+        //Happy face appears when mouse is pressed
         fill("#ffd1c9");
         ellipse(width / 2, height / 2, 200, 200);
         //winking face
@@ -24,22 +33,38 @@ function draw() {
     } else {
 
         //pink rectangles respond to mouse position
+        //        fill("#ffd1c9");
+        //        rect(mouseX, 20, 800, 20);
+        //        rect(mouseY, 60, 800, 20);
+        //        rect(mouseX, 100, 800, 20);
+        //        rect(mouseY, 140, 800, 20);
+        //        rect(mouseX, 180, 800, 20);
+        //        rect(mouseY, 220, 800, 20);
+
         fill("#ffd1c9");
-        rect(mouseX, 0, 800, 20);
-        rect(mouseY, 40, 800, 20);
-        rect(mouseX, 80, 800, 20);
-        rect(mouseY, 120, 800, 20);
-        rect(mouseX, 160, 800, 20);
-        rect(mouseY, 200, 800, 20);
+        rect(mouseX, 15, 800, 20);
+        rect(mouseY, 55, 800, 20);
+        rect(mouseX, 95, 800, 20);
+        rect(mouseY, 135, 800, 20);
+        rect(mouseX, 175, 800, 20);
+        rect(mouseY, 215, 800, 20);
 
         //grey rectangles respond to mouse position
+        //        fill("#787878");
+        //        rect(0, 0, mouseX, 20);
+        //        rect(0, 40, mouseY, 20);
+        //        rect(0, 80, mouseX, 20);
+        //        rect(0, 120, mouseY, 20);
+        //        rect(0, 160, mouseX, 20);
+        //        rect(0, 200, mouseY, 20);
+
         fill("#787878");
-        rect(0, 0, mouseX, 20);
-        rect(0, 40, mouseY, 20);
-        rect(0, 80, mouseX, 20);
-        rect(0, 120, mouseY, 20);
-        rect(0, 160, mouseX, 20);
-        rect(0, 200, mouseY, 20);
+        rect(0, 15, mouseX, 20);
+        rect(0, 55, mouseY, 20);
+        rect(0, 95, mouseX, 20);
+        rect(0, 135, mouseY, 20);
+        rect(0, 175, mouseX, 20);
+        rect(0, 215, mouseY, 20);
 
 
     }
