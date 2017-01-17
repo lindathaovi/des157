@@ -12,8 +12,8 @@ function draw() {
 
     if (mouseIsPressed == true) {
 
-        fill("#ffd1c9")
-        ellipse(width / 2, height / 2, 200, 200)
+        fill("#ffd1c9");
+        ellipse(width / 2, height / 2, 200, 200);
 
         noStroke();
         textSize(60);
