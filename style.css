@@ -1,13 +1,148 @@
-/*note to self eric meyer reset*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
 
-* {
-    margin: 0px;
-    padding: 0px;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
 }
+
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+/* =====START CSS==== */
 
 body {
     font-family: "didot", "Georgia", serif;
     text-transform: uppercase;
+    font-weight: bold;
 }
 
 h1 {
@@ -18,16 +153,14 @@ h1 {
 h2 {
     font-size: 20pt;
     text-align: center;
-}
-
-h3 {
-    font-size: 10pt;
-    text-align: center;
+    margin-bottom: 10px;
 }
 
 p {
     font-family: "Helvetica", sans-serif;
-    margin-top: -45px;
+    font-weight: normal;
+    margin-top: 10px;
+    margin-left: 5px;
     font-size: 10pt;
     color: #787878;
 }
@@ -45,9 +178,15 @@ ul {
     list-style-type: circle;
 }
 
+ol {
+    list-style-type: decimal;
+}
+
 li {
     font-family: "Helvetica", sans-serif;
+    font-weight: normal;
     color: #ffd1c9;
+    line-height: 17px;
 }
 
 li a {
@@ -61,15 +200,17 @@ li a:hover {
 }
 
 .onethird {
-    width: 33%;
+    width: 30%;
+    padding: 12px;
 }
 
 .onefifth {
-    width: 20%;
+    width: 250px;
+    ;
 }
 
-.onehalf {
-    width: 50%;
+.fourfifths {
+    width: 60%;
 }
 
 .column {
@@ -87,24 +228,25 @@ li a:hover {
 }
 
 .fixedside {
-    position: fixed;
     height: 150px;
+    position: fixed;
     padding-left: 25px;
-    margin-top: -150px;
+    margin-top: -4%;
+    /*check on bigger comp*/
     text-align: left;
 }
 
 .bannercon {
     width: 100%;
     text-align: center;
-    margin-top: 150px;
+    margin-top: 14%;
 }
 
 #fixedfoot {
     position: fixed;
     width: 100%;
-    height: 50px;
+    height: 40px;
     bottom: 0px;
     background-color: #ffd1c9;
-    line-height: 10px;
+    padding-top: 15px;
 }
