@@ -219,8 +219,8 @@ header aside {
 
 .navmenu {
     font-family: "didot", "Georgia", serif;
-    font-size: 15pt;
-    font-weight: bold;
+    font-size: 12pt;
+    /*    text-transform: none;*/
     margin-top: 70px;
     margin-left: 0px;
 }
@@ -263,8 +263,8 @@ a:visited {
     margin-right: 20px;
     text-align: right;
     font-size: 110pt;
-    font-weight: bold;
     text-transform: uppercase;
+    font-weight: bold;
     line-height: 55px;
 }
 
