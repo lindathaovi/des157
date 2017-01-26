@@ -1,0 +1,285 @@
+/*note to self eric meyer reset*/
+
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+/* =====START CSS==== */
+
+body {
+    font-family: "didot", "Georgia", serif;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 50pt;
+    line-height: 55px;
+}
+
+h2 {
+    font-size: 25pt;
+    margin-bottom: 7px;
+    margin-top: 7px;
+}
+
+h3 {
+    font-size: 20pt;
+}
+
+p {
+    font-family: "Helvetica", sans-serif;
+    font-weight: normal;
+    line-height: 18px;
+    letter-spacing: .4px;
+    text-transform: none;
+    text-align: justify;
+    font-size: 10pt;
+    color: #787878;
+    margin-right: 200px;
+    margin-bottom: 10px;
+}
+
+header a {
+    text-decoration: none;
+    color: #000000;
+}
+
+header aside {
+    padding-left: 25px;
+}
+
+.onefifth {
+    width: 17%;
+}
+
+.fourfifths {
+    width: 80%;
+}
+
+.column {
+    float: left;
+}
+
+.row {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.center {
+    margin: auto;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    width: 250px;
+    /*    height: 100%;*/
+    margin-top: 75px;
+}
+
+.navmenu {
+    font-family: "didot", "Georgia", serif;
+    font-size: 12pt;
+    /*    text-transform: none;*/
+    margin-top: 30px;
+    margin-left: 0px;
+}
+
+.navmenu ul {
+    list-style-type: none;
+    line-height: 40px;
+}
+
+.navmenu a,
+a:visited {
+    position: relative;
+}
+
+.navmenu a:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1.5px;
+    bottom: 0;
+    left: 0px;
+    background-color: #ffd1c9;
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.navmenu a:hover:before {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+}
+
+.blogtitle {
+    font-family: "didot", "Georgia", serif;
+    color: #ffd1c9;
+    margin-top: 105px;
+    margin-right: 20px;
+    text-align: right;
+    font-size: 110pt;
+    text-transform: uppercase;
+    font-weight: bold;
+    line-height: 55px;
+}
+
+.mainbody {
+    margin-left: 280px;
+    margin-bottom: 50px;
+    width: 800px;
+}
+
+#imagerow {
+    margin-right: 200px;
+    text-align: center;
+}
+
+article img {
+    max-height: 500px;
+    max-width: 100%;
+}
