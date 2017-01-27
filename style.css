@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
@@ -249,4 +251,6 @@ li a:hover {
     bottom: 0px;
     background-color: #ffd1c9;
     padding-top: 15px;
+    font-size: 20pt;
+    text-align: center;
 }
