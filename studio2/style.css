@@ -162,6 +162,11 @@ h2{
   margin-bottom: 10px;
 }
 
+a{
+  text-decoration: none;
+  color:black;
+}
+
 .column {
   float:left;
 }
