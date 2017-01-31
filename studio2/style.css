@@ -147,12 +147,18 @@ table {
 
 body{
   background-image: url('images/grid.png');
-  font-family: 'Coming Soon', sans-serif;;
+  font-family: 'Coming Soon', sans-serif;
+  font-size: 20px;
   padding:25px;
 }
 
 h1{
   font-size: 45pt;
+  margin-bottom: 20px;
+}
+
+h2{
+  font-size: 20pt;
   margin-bottom: 10px;
 }
 
@@ -171,6 +177,7 @@ h1{
 
 .form{
   background-color: #ffffff;
+  font-family: 'Coming Soon', sans-serif;
   padding: 10px;
   margin-left: 30px;
   width:45%;
@@ -178,6 +185,27 @@ h1{
   line-height: 25px;
 
 }
+
+input[type=text] {
+  font-family: 'coming soon';
+  font-size: 10pt;
+  width:200px;
+  height:auto;
+  position:fixed;
+  left:270px;
+  border:none;
+  background-color: #c8eaff;
+  border-radius: 10px;
+  border-bottom: 3px #56bdff solid;
+  padding:2px;
+}
+
+input[type=text]:focus {
+  background-color: #ffffff;
+  border-bottom: 3px #56bdff solid;
+  color:black;
+}
+
 
 #fixedfoot {
     position: fixed;
@@ -192,6 +220,6 @@ h1{
 }
 
 #footimg {
-  position: fixed;
+position: fixed;
   bottom:0px;
 }

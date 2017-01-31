@@ -22,8 +22,8 @@ function processForm(){
 
 
  //alert message if any form elements not answered
- if(userName == ' ' || food == ' ' || drink == ' ' || number == ' ' || adj1 ==' '
- || subject == ' ' || noun1 == ' ' || sticky == ' ' || person == ' '){
+ if(userName == '' || food == '' || drink == '' || number == '' || adj1 ==''
+ || subject == '' || noun1 == '' || sticky == '' || person == ''){
    alert("HEY! waaaiittt. I know you're sleep deprived but you need to fill out everything" );
 
    return false;
