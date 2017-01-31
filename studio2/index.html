@@ -12,19 +12,18 @@
 <body>
 
     <header>
-        <h1>Smooth Operator</h1>
+        <h1>Diary of a Design Student</h1>
         <div>
             <!--BANNER IMAGE GOES HERE. FIXED HEADER. IMAGE POSTION RIGHT -->
             <!-- <img src="#" /> -->
         </div>
     </header>
 
-    <section>
+    <section class='center'>
         <!-- ===FORM=== -->
-        <div>
+        <div class='form column'>
             <form name="madlib">
-                <div>
-
+                <!--<div>
                     <label>Gender</label>
                     <select name="userSex">
                       <option value="blank">---</option>
@@ -32,6 +31,26 @@
                       <option value="girl">Female</option>
                       <option value="there">Undefined</option>
                     </select>
+                </div> -->
+
+                <div>
+                  <label>Name</label>
+                  <input type="text" name="userName">
+                </div>
+
+                <div>
+                  <label>Food</label>
+                  <input type="text" name="food">
+                </div>
+
+                <div>
+                  <label>Drink</label>
+                  <input type="text" name="drink">
+                </div>
+
+                <div>
+                  <label>Number</label>
+                  <input type="text" name="number">
                 </div>
 
                 <div>
@@ -40,23 +59,36 @@
                 </div>
 
                 <div>
+                  <label>Subject</label>
+                  <input type="text" name="subject">
+                </div>
+
+                <div>
                   <label>Noun</label>
                   <input type="text" name="noun1">
                 </div>
 
                 <div>
-
+                  <label>Something Sticky</label>
+                  <input type="text" name="sticky">
                 </div>
 
-
+                <div>
+                  <label>Person</label>
+                  <input type="text" name="person">
+                </div>
 
 
                 <input type="reset" value="reset" />
                 <input type="submit" value="submit" />
 
-                <p id='response'></p>
+
 
             </form>
+        </div>
+
+        <div class='form column'>
+          <p id='response'></p>
 
         </div>
 
@@ -69,17 +101,25 @@
     </section>
 
 
-  <!--  <footer>
 
-        <h2>
+   <footer >
+
+     <div id='footimg'>
+       <img src= "images/cat.gif" alt='kitty' />
+
+     </div>
+
+     <div id='fixedfoot'>
+
       <a href="https://validator.w3.org/check?uri=referer">Valid HTML 5</a> |
 
       <a href="https://jigsaw.w3.org/css-validator/check/referer">Valid CSS</a>
-    </h2>
+
+      </div>
+
 
     </footer>
 
-  -->
 
 </body>
 

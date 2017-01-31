@@ -1,7 +1,7 @@
 /*note to self eric meyer reset*/
 
 
-/* http://meyerweb.com/eric/tools/css/reset/ 
+/* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
@@ -210,7 +210,7 @@ header aside {
 .sidebar {
     position: fixed;
     top: 0px;
-    left: 0px;
+    left: 15px;
     bottom: 0px;
     width: 250px;
     /*    height: 100%;*/
@@ -277,6 +277,10 @@ a:visited {
 #imagerow {
     margin-right: 200px;
     text-align: center;
+}
+
+article {
+  margin-bottom:50px;
 }
 
 article img {
