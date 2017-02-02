@@ -1,9 +1,16 @@
 <!doctype html>
+
+<!-- IMG SOURCES
+Cat: https://66.media.tumblr.com/2c7da31c87a49fd98d4146fa8a90a944/tumblr_mqjtiwh5kt1s50o8ro1_400.png
+Hat: http://freepngimages.com/wp-content/uploads/2015/08/bowler-hat.png
+-->
 <html>
 
 <head>
-    <meta charset="UTF-8">
+
     <title>The Cat's Hat</title>
+    <meta charset="UTF-8">
+
     <style>
         * {
             margin: 0px;
@@ -35,6 +42,21 @@
           color: #ffffff;
         }
 
+        p{
+          text-align: center;
+          font-size: 25px;
+        }
+
+        .meow {
+          color:#ffd1c9;
+          margin-top:200px;
+        }
+
+        #cat,#hat {
+          position: relative;
+          margin-top: -100px;
+        }
+
         #fixedfoot {
             position: fixed;
             width: 100%;
@@ -50,10 +72,46 @@
 
 <body>
     <h1>Ch 13 | The Cat's Hat</h1>
-    <!-- <h2>open the console to see the results of the script</h2> -->
-    <h2>exercise to be completed</h2>
+
+    <h2>What do you call a pile of cats?</h2>
+
+    <p class="meow">
+      A Meowtain.
+    </p>
+
+    <p>
+
+      <img src="images/cat.png" id="cat" alt="cat">
+      <img src="images/hat.png" id="hat" alt="hat">
+    </p>
     <script>
-        // ADD DESCRIPTIVE COMMENTS BEFORE STATEMENTS AND BLOCK OF CODE
+        //objective is to make cat and hat rotate oposing directions around a point
+        //first separately select cat & hat elements with querySelector
+        var cat = document.querySelector('#cat');
+        var hat = document.querySelector('#hat');
+        //initial variables for position and run smooth animation
+        var angle = 0 , lastTime=null;
+
+        //animation function dependent on time
+        function animate(time) {
+          if (lastTime != null) //Keep animation looping
+          angle += (time - lastTime) * 0.001; //add to angle as time changes
+          lastTime = time; //update time to current and continue loop
+
+          //cat position
+          cat.style.top = (Math.sin(angle) * 170) + "px"; //vertical movement
+          cat.style.left = (Math.cos(angle) * 220) + "px"; //horizontal movement
+          //hat position. switched x & y of cat for opposite direction
+          hat.style.top = (Math.cos(angle) * 170) + "px"; //vertical movement
+          hat.style.left = (Math.sin(angle) * 240) + "px"; //horizontal movement
+
+          //green light to animate
+          requestAnimationFrame(animate);
+        }
+
+        requestAnimationFrame(animate);
+
+
 
 
 
