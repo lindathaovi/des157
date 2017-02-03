@@ -176,6 +176,17 @@ p {
     margin-bottom: 10px;
 }
 
+a{
+  text-decoration: none;
+  color:#787878;
+}
+
+a:hover {
+  color:#ffd1c9;
+}
+
+
+
 header a {
     text-decoration: none;
     color: #000000;
