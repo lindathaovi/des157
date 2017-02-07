@@ -124,6 +124,10 @@ section p {
     opacity: 1;
     transition: opacity 1s;
 }
+ .textfade{
+   opacity:0;
+   transition: opacity 1s ease-in;
+ }
 
 footer {
     text-align: center;

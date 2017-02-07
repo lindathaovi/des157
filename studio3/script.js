@@ -177,6 +177,23 @@ burro.addEventListener('click', function(){
 
 });
 
+//call divs for text info and title to fade in
+var textfade = document.getElementById('textfade');
+var titlefade = document.getElementById('titlefade');
+
+//when hovering over plantImg fade other two
+plantImg.addEventListener('mouseover', function(){
+textfade.className=('fadein');
+titlefade.className=('fadein');
+
+});
+
+plantImg.addEventListener('mouseout', function(){
+textfade.className=('textfade');
+titlefade.className=('textfade');
+
+});
+
 
 
 
