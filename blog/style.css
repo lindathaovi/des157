@@ -185,6 +185,15 @@ a:hover {
   color:#ffd1c9;
 }
 
+article ul{
+  font-family: "Helvetica", sans-serif;
+  font-size: 10pt;
+  line-height: 18px;
+  font-weight: normal;
+  letter-spacing: .4px;
+  text-transform: none;
+  color: #787878;
+}
 
 
 header a {
@@ -285,9 +294,11 @@ a:visited {
     width: 800px;
 }
 
-#imagerow {
-    margin-right: 200px;
-    text-align: center;
+img{
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left:5px;
 }
 
 article {

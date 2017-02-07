@@ -21,53 +21,74 @@ zz.addEventListener('mouseover', function(){
   zz.src = 'images/zzcolor.png'; //change to color img
   zz.className = "fadein"; //fade in color
 
+
+
+
 });
 
 eche.addEventListener('mouseover', function(){
   eche.src='images/echeveriacolor.png';
   eche.className = "fadein";
 
+
+
 });
 
 angelina.addEventListener('mouseover',function(){
   angelina.src='images/angelinacolor.png';
   angelina.className = "fadein";
+
+
 });
 
 portu.addEventListener('mouseover', function(){
   portu.src='images/portulacariacolor.png';
   portu.className = "fadein";
+
+
 });
 
 burro.addEventListener('mouseover', function(){
   burro.src='images/burrocolor.png';
   burro.className = "fadein";
+
+
 });
 
 //mouseout reverts back to black and white sketch
 zz.addEventListener('mouseout', function(){
   zz.src ='images/zzplant.png';
   zz.className = "fade"; //fade img
+
+
 });
 
 eche.addEventListener('mouseout', function(){
   eche.src='images/echeveria.png';
   eche.className = "fade";
+
+
 });
 
 angelina.addEventListener('mouseout',function(){
   angelina.src='images/angelina.png';
   angelina.className = "fade";
+
+
 });
 
 portu.addEventListener('mouseout', function(){
   portu.src='images/portulacaria.png';
   portu.className = "fade";
+
+
 });
 
 burro.addEventListener('mouseout', function(){
   burro.src='images/burro.png';
   burro.className = "fade";
+
+
 });
 
 //capture divs by ID into variables
@@ -85,15 +106,18 @@ zz.addEventListener('click', function(){
   plantImg.addEventListener('mouseover', function(){ //another listener waits for hover to display info
     plantInfo.innerHTML="This is a zz plant. Otherwise known as Zamioculcas Zamifolia. I bought this at IKEA on a whim to match my housemate who also had one. This was the beginning of my plant collection. The cockroach of plants. It will never die.";
     plantName.innerHTML="ZZ Plant";
+
   });
 //mouseout clears info displayed
   plantImg.addEventListener('mouseout', function(){
     plantInfo.innerHTML="";
     plantName.innerHTML="";
+
   });
 
 });
 
+//clicking on main image calls plant image.
 eche.addEventListener('click', function(){
   plantImg.innerHTML="<img src='images/echeveriacolor.png'>"; //plant image
   plantImg.addEventListener('mouseover', function(){ //another listener waits for hover to display info
@@ -108,7 +132,7 @@ eche.addEventListener('click', function(){
 
 });
 
-
+//clicking on main image calls plant image.
 angelina.addEventListener('click', function(){
   plantImg.innerHTML="<img src='images/angelinacolor.png'>"; //plant image
   plantImg.addEventListener('mouseover', function(){ //another listener waits for hover to display info
@@ -123,6 +147,7 @@ angelina.addEventListener('click', function(){
 
 });
 
+//clicking on main image calls plant image.
 portu.addEventListener('click', function(){
   plantImg.innerHTML="<img src='images/portulacariacolor.png'>"; //plant image
   plantImg.addEventListener('mouseover', function(){ //another listener waits for hover to display info
@@ -137,6 +162,7 @@ portu.addEventListener('click', function(){
 
 });
 
+//clicking on main image calls plant image.
 burro.addEventListener('click', function(){
   plantImg.innerHTML="<img src='images/burrocolor.png'>"; //plant image
   plantImg.addEventListener('mouseover', function(){ //another listener waits for hover to display info
