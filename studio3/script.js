@@ -188,6 +188,7 @@ titlefade.className=('fadein');
 
 });
 
+
 plantImg.addEventListener('mouseout', function(){
 textfade.className=('textfade');
 titlefade.className=('textfade');
