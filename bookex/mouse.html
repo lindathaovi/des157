@@ -45,16 +45,63 @@
             padding-top: 15px;
             text-align: center;
         }
+
+        .trail { /* className for the trail elements */
+            position: absolute;
+            height: 15px;
+            width: 15px;
+            border-radius: 10px;
+            background: #ffd1c9;
+            animation: fade 2s infinite;
+          }
+
+          @keyframes fade {
+           0%
+            { opacity: 1;
+              background: #ffd1c9;
+            }
+           25%
+            { opacity: .5;
+              background: #FF9770;
+            }
+           100%
+            { opacity: 1;
+              background:#ffd1c9;
+             }
+       }
+
     </style>
 </head>
 
 <body>
     <h1>Ch 14 | Mouse Trail</h1>
 
-    <!-- <h2>open the console to see the results of the script</h2> -->
+
     <h2>exercise to be completed</h2>
+
     <script>
-        // ADD DESCRIPTIVE COMMENTS BEFORE STATEMENTS AND BLOCK OF CODE
+
+        var shape = []; //load shape array
+
+        //loop create shapes in array
+        for (var i = 0; i < 30; i++) {
+          var createnode = document.createElement('div'); //creates a div element
+          createnode.className = 'trail'; //pull shape
+          document.body.appendChild(createnode); //append trail to div
+          shape.push(createnode); //push to array
+        }
+
+        var current = 0;
+
+        //event listener for mousemove to track circles with cursor movement
+        addEventListener('mousemove', function(event){
+          var circle = shape[current];
+          circle.style.left= (event.pageX - 3) + 'px'; //x location
+          circle.style.top= (event.pageY - 3) + 'px'; //y location
+          current = (current + 1) % shape.length; //trail length
+
+        });
+
 
 
 
