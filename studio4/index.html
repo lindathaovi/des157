@@ -3,25 +3,63 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>DOMContentLoaded template</title>
+    <title>Planet, Stars, and Moon Oh My!</title>
     <link href="style.css" rel="stylesheet" />
     <script src='script.js' type="text/javascript"></script>
 </head>
 
 <body>
     <header>
-      
+        <h1>Planets, Stars and Moons Oh My!</h1>
+        <div id='headerbox'>
+        </div>
 
     </header>
 
-    <!--add links to validators-->
+    <div class='wrapper'>
+
+        <section>
+
+            <h2 id='moon'>COUNTDOWN</h2>
+            <div class='tip' id="moonTip"><img src='images/moon.gif' alt='moon' /></div>
+
+            <article id="moonbox">
+                <p>until the next full moon! For the moon to go through a complete cycle, it takes 29.5 days.</p>
+            </article>
+        </section>
+
+
+        <section>
+
+            <h2 id='orbit'>ANOTHA ONE</h2>
+            <div class='tip' id="orbitTip"><img src='images/orbit.gif' alt='orbit' /></div>
+
+            <article class='right' id="orbitbox">
+                <p>until earth completes it's orbit around the sun! It takes approximately 365.256 days. This counter is counting to the New Year!</p>
+            </article>
+        </section>
+
+
+        <section>
+
+            <h2 id='earth'>ANOTHA ONE</h2>
+            <div class='tip' id="earthTip"><img src='images/moon.gif' alt='earth' /></div>
+
+            <article id="earthbox">
+                <p>until earth completes 1 rotation around its axis! This countdown approximates earth's rotation around its axis with respect to the stars which takes 23 hours, 56 minutes and 4 seconds. With respect to the sun, it would take approximately
+                    24 hours.</p>
+
+            </article>
+        </section>
+
+    </div>
 
     <footer>
         <nav>
-            <ul>
-                <li>  <a href="https://validator.w3.org/check?uri=referer" target="_blank">valid html</a></li>
-                <li><a href="https://jigsaw.w3.org/css-validator/check/referer" target="_blank">valid css</a></li>
-            </ul>
+
+            <a href="https://validator.w3.org/check?uri=referer" target="_blank">valid html</a> |
+            <a href="https://jigsaw.w3.org/css-validator/check/referer" target="_blank">valid css</a>
+
         </nav>
     </footer>
 </body>

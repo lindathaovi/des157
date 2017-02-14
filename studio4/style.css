@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Chathura|Julius+Sans+One|Lekton|Playfair+Display+SC');
 
 /* CSS Document */
 
@@ -49,6 +50,110 @@ table {
 
 /* ====CSS START==== */
 
-h1{
+body {
+    font-family: 'Lekton', sans-serif;
+    /*background-image: url('images/bg.gif');*/
+    background-attachment: fixed;
+}
 
+header {
+    margin: 2% 0;
+}
+
+#headerbox {
+    background-color: #d2cccc;
+    width: 600px;
+    max-width: 80%;
+    margin-top: 50px;
+    position: relative;
+    margin: auto;
+    margin-top: -200px;
+    height: 180px;
+    z-index: -1;
+}
+
+h1 {
+    font-family: 'Julius Sans One', sans-serif;
+    color: #000000;
+    text-align: center;
+    font-size: 5em;
+    letter-spacing: -.01em;
+    line-height: .9em;
+    width: 50%;
+    margin: auto;
+}
+
+h2 {
+    font-family: 'Julius Sans One', sans-serif;
+    color: #000000;
+    font-size: 4em;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.right {
+    margin-left: auto;
+}
+
+section {
+    margin: 6% 0;
+}
+
+article {
+    margin-top: -30px;
+    width: 600px;
+    max-width: 80%;
+    height: 200px;
+    color: #fff;
+}
+
+article p {
+    padding: 40px;
+}
+
+#orbit {
+    text-align: right;
+}
+
+#moonbox {
+    background-color: #5f3c5d;
+    background: linear-gradient(to bottom right, #5f3c5d, #833677);
+}
+
+#orbitbox {
+    background-color: #4b5669;
+    background: linear-gradient(to bottom right, #4b5669, #416d77);
+}
+
+#earthbox {
+    background-color: #2c1328;
+    background: linear-gradient(to bottom right, #67284e, #733a6a);
+}
+
+.tip {
+    position: absolute;
+    opacity: 0;
+}
+
+#moonTip {
+    right: 150px;
+    top: 300px;
+}
+
+#orbitTip {
+    left: 150px;
+    top: 700px;
+}
+
+#earthTip {
+    right: 150px;
+    top: 1100px;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
 }
