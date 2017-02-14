@@ -62,7 +62,7 @@ body {
 
 header {
     margin: 2% 0;
-    height: 100vh;
+    height: 700px;
 }
 
 #headerbox {
@@ -74,7 +74,7 @@ header {
     margin-left: 200px;
     margin: auto;
     margin-top: -450px;
-    height: 80vh;
+    height: 600px;
     z-index: -1;
 }
 
@@ -90,6 +90,8 @@ h1 {
     padding-top:5%;
 
 }
+
+
 
 h2 {
     font-family: 'Julius Sans One', sans-serif;
