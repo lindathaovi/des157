@@ -69,11 +69,11 @@ header {
     background-color: #d2cccc;
     width: 1000px;
     max-width: 90%;
-    position: absolute;
+    position: relaive;
     top:450px;
-    margin-left: auto;
+    margin-left: 200px;
     margin: auto;
-    margin-top: -400px;
+    margin-top: -450px;
     height: 80vh;
     z-index: -1;
 }
