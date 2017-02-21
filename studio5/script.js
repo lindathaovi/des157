@@ -13,25 +13,45 @@ document.addEventListener("DOMContentLoaded", function() {
     var url = 'https://www.googleapis.com/language/translate/v2?';
 
     //capture submit event
-    document.chatbox.onsubmit = processForm(url, key, source, target);
+    //document.chatbox.onsubmit = processForm(url, key, source, target);
+
+    document.chatbox.onsubmit=processForm2;
+    function processForm2(){
+      console.log('processForm2');
+      //store message into variable
+     //   //  var originalMsg = document.chatbox.originalMsg.value;
+
+       var translatedMsg = document.getElementById('translatedMsg'); //capture translated element
+     //  translatedMsg.innerHTML= 'Your message translated: '+ trans; //call innerhtml to place new translated message
+
+      var originalMsg = document.chatbox.originalMsg.value;
+        url += 'key='+key+'&source='+source+'&target='+target+'&q='+originalMsg;
+
+        // translate text
+        translate(url);
+
+        return false; //prevent page from reloading
+    }
 
 
-//define processform
-function processForm (url, key, source, target) {
-   //store message into variable
-  //  var originalMsg = document.chatbox.originalMsg.value;
-
-   var translatedMsg = document.getElementById('translatedMsg'); //capture translated element
-  //  translatedMsg.innerHTML= 'Your message translated: '+ trans; //call innerhtml to place new translated message
-
-  var originalMsg = document.chatbox.originalMsg.value;
-  url += 'key='+key+'&source='+source+'&target='+target+'&q='+originalMsg;
-
-  // translate text
-  translate(url);
-
-  return false; //prevent page from reloading
-}
+//
+// //define processform
+// function processForm (url, key, source, target) {
+//   console.log('processForm');
+//    //store message into variable
+//   //  var originalMsg = document.chatbox.originalMsg.value;
+//
+//    var translatedMsg = document.getElementById('translatedMsg'); //capture translated element
+//   //  translatedMsg.innerHTML= 'Your message translated: '+ trans; //call innerhtml to place new translated message
+//
+//   var originalMsg = document.chatbox.originalMsg.value;
+//   url += 'key='+key+'&source='+source+'&target='+target+'&q='+originalMsg;
+//
+//   // translate text
+//   translate(url);
+//
+//   return false; //prevent page from reloading
+// }
 
 //parse json into js object
 function translate(url) {
