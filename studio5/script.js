@@ -52,7 +52,6 @@ document.addEventListener("DOMContentLoaded", function() {
 //
 //   return false; //prevent page from reloading
 // }
-
 //parse json into js object
 function translate(url) {
       console.log(url)
