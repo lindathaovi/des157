@@ -17,6 +17,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     document.chatbox.onsubmit=processForm2;
     function processForm2(){
+      url = 'https://www.googleapis.com/language/translate/v2?';
       console.log('processForm2');
       //store message into variable
      //   //  var originalMsg = document.chatbox.originalMsg.value;
