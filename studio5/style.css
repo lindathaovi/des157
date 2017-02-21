@@ -73,13 +73,24 @@ header{
 }
 
 nav div {
-	height:100px;
+	height:50px;
 	border: 1px solid lightblue;
+	text-align: center;
+	padding-top:50px;
 }
 
 section {
 	margin-left: 350px;
+	padding-top:50px;
+	padding-left:50px;
 	width:900;
 	height:100vh;
 	background-color: lightblue;
+}
+
+
+
+footer {
+margin-left: 350px;
+text-align: center;
 }
