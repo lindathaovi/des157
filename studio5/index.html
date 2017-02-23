@@ -11,77 +11,25 @@
 
 <body>
     <header>
-
-        <div class='profile'>
-            <img src="images/linda.png" alt="Linda Tran" />
-            <h1>Linda Tran</h1>
-        </div>
-
-        <nav>
-
-            <div>
-                <p>contact</p>
-            </div>
-
-            <div>
-                <p>contact</p>
-            </div>
-
-            <div>
-                <p>contact</p>
-            </div>
-
-            <div>
-                <p>contact</p>
-            </div>
-
-            <div>
-                <p>contact</p>
-            </div>
-
-            <div>
-                <p>contact</p>
-            </div>
-
-            <div>
-                <p>contact</p>
-            </div>
-
-            <div>
-                <p>contact</p>
-            </div>
-
-        </nav>
+        <h1>Parlez-vous français?</h1>
     </header>
 
-    <section>
+        <form name='chatbox'>
+            <div><textarea rows="2" cols="27" name="originalMsg"></textarea></div>
 
-      <h2>Translate!</h2>
+            <input type="submit" value="oui" />
+        </form>
 
-        <div class='mainb'>
-            <form name='chatbox'>
-
-                <div>
-
-                    <textarea name="originalMsg"></textarea>
-                </div>
-
-                <input type="submit" value="send" />
-
-            </form>
-
-            <div id='translatedMsg'>
-                translation goes here
-            </div>
-
-        </div>
-    </section>
+    <div id='response'>
+        <div id='translatedMsg'></div>
+    </div>
 
     <footer>
         <nav>
-          <a href="https://validator.w3.org/check?uri=referer" target="_blank">valid html</a> |
-          <a href="https://jigsaw.w3.org/css-validator/check/referer" target="_blank">valid css</a>
-
+            <a href="https://cloud.google.com/translate/" target="_blank">Google Translate</a> |
+            <a href="../index.html" target="_blank">portal</a> |
+            <a href="https://validator.w3.org/check?uri=referer" target="_blank">valid html</a> |
+            <a href="https://jigsaw.w3.org/css-validator/check/referer" target="_blank">valid css</a>
         </nav>
     </footer>
 

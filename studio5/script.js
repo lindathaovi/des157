@@ -23,23 +23,11 @@ document.addEventListener("DOMContentLoaded", function() {
         // translate text
         translate(url);
 
+        //reveal response div on submit
+        var unhide = document.getElementById('response').style.visibility = 'visible';
+
         return false; //prevent page from reloading
     }
-
-    // //define processform
-    // function processForm(url, key, source, target) {
-    //     console.log('processForm');
-    //
-    //     var translatedMsg = document.getElementById('translatedMsg'); //capture translated element
-    //
-    //     var originalMsg = document.chatbox.originalMsg.value;
-    //     url += 'key=' + key + '&source=' + source + '&target=' + target + '&q=' + originalMsg;
-    //
-    //     // translate text
-    //     translate(url);
-    //
-    //     return false; //prevent page from reloading
-    // }
 
 
     //parse json into js object

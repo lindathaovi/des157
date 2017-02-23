@@ -3,14 +3,12 @@
 
 <head>
     <title>Linda's Blog</title>
-
     <meta charset="utf-8">
     <link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
-
     <header>
 
         <div class="sidebar onefifth column">
@@ -25,6 +23,7 @@
                     <li><a href="https://jigsaw.w3.org/css-validator/check/referer">Valid CSS</a></li>
                 </ul>
             </div>
+
         </div>
 
 
@@ -37,6 +36,57 @@
 
 
     <div class="mainbody column row">
+
+      <article>
+          <h3>2.22.17</h3>
+          <h2>Meet Me at the Library</h2>
+
+          <img src="images/library.png" alt="Library">
+
+          <p>
+            For my last studio, instead of a library I decided to learn how to use
+            the Google Cloud Translate API. It is essential that I am able to translate
+            messages between users in my interface because my audience involves non english
+            speakers as well. Langauge is a large player in barriers to communication
+            and so I wanted to incorporate Google Translate in the messaging part of
+            my project.
+
+            <br /><br />
+
+            Google Cloud Translate API allows you to take a string and translate it to any language
+            that google translate offers. It allows you to use google translate within
+            your project for whatever purposes that may be. The possibilities and applications
+            are endless in regards to translation. The only downside to this is that it is not
+            free. I was able to get an api key through a free trial that gave me $300 credits over 60 days.
+
+            <br /><br />
+
+            While learning how to use this API, I spent a lot of time trying to figure
+            out how to take the translated text and display it in my html. Essentially,
+            I used js to grab the string which the user entered into the text box and
+            contatenated it to the api url. Once google translated the string, I
+            needed to parse the json to make it a js object and throw it back into
+            the html as a translated response.
+
+            <br /><br />
+            I also struggled with making the translation appear once the submit button
+            of the form was clicked. It turned out I wasn't calling my translation function
+            on submit in my js.
+
+            <br /><br />
+            Through my time learning how to use an api and building my translation box
+            I feel that I've increased my understanding of not only apis but also js
+            and syntax in general. It was a frustrating but also rewarding experience.
+            <br /><br />
+
+            Check out: <a href="https://cloud.google.com/translate/" target="_blank">Google Cloud Translate</a>
+          </p>
+
+
+
+
+      </article>
+
 
       <article>
           <h3>2.14.17</h3>
@@ -75,9 +125,6 @@
               <br />It becomes the main focal point of the website and the other information acts as an aide.
             </li>
           </ul>
-
-
-
 
       </article>
 
