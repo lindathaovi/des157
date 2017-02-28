@@ -200,9 +200,14 @@ article ul {
 }
 
 article li {
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   margin-left: 20px;
   margin-top:10px;
+  line-height: 13pt;
+}
+
+article ul{
+  list-style: circle;
 }
 
 header a {
