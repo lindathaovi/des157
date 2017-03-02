@@ -244,6 +244,10 @@ li a:hover {
     margin-top: 14%;
 }
 
+nav{
+  padding-bottom: 50px;
+}
+
 #fixedfoot {
     position: fixed;
     width: 100%;
