@@ -214,3 +214,13 @@ img {
     display: flex;
     flex-wrap: nowrap;
 }
+
+/*===== NEWS ====*/
+
+article{
+  padding:15px;
+}
+
+article p{
+  margin-top:15px;
+}
