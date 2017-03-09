@@ -70,7 +70,7 @@ h1, h2 {
 }
 
 h1 {
-    font-size: 20px;
+    font-size: 20pt;
     margin: 10px 0px;
 }
 
@@ -83,6 +83,10 @@ h2 {
 h3 {
     font-size: 25pt;
     margin-top: 5px;
+}
+
+h4{
+  font-size: 20pt
 }
 
 p {
