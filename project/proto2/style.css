@@ -94,7 +94,9 @@ p {
 }
 
 a {
-    color: #ffffff
+    color: #ffffff;
+    text-decoration: none;
+
 }
 
 .center{
@@ -223,4 +225,22 @@ article{
 
 article p{
   margin-top:15px;
+
+}
+
+.mailicon{
+  margin:auto;
+  margin-top:0px;
+
+
+}
+
+/*===== CHAT ====*/
+
+main{
+  height:300px;
+  width:99%;
+  background-color: #ffffff;
+  margin:auto;
+  border-radius: 5px;
 }
