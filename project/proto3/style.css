@@ -247,6 +247,34 @@ main{
   border-radius: 5px;
 }
 
+#promptpop{
+  position: absolute;
+  margin:auto;
+  margin-left:35px;
+  margin-top:40px;
+  border:1px solid #5ec3ea;
+  border-radius: 20px;
+  background:  linear-gradient(#5ec3ea, #926aff);
+  color:#ffffff;
+  height:100px;
+  width:300px;
+  display: none;
+
+}
+
+#promptText{
+  text-align:center;
+  padding:15px;
+}
+
+#close{
+  text-align: right;
+  padding-right: 15px;
+  padding-top:10px;
+}
+
+
+
 #message-form{
   border-top: 1px solid #5ec3ea;
 }
