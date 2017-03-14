@@ -58,6 +58,8 @@ body {
 }
 
 .container {
+    /*width: 750px;
+    height: 1134px;*/
     width: 375px;
     height: 667px;
     overflow: scroll;
@@ -132,7 +134,7 @@ a {
 		font-size: 15pt;
 }
 
-#loginbtn {
+.loginbtn {
 	border: 1px solid #ffffff;
 	width:70px;
 	margin-top:10px;
@@ -251,6 +253,6 @@ main{
 
 }
 
-#msginput{
+#message{
   width:300px;
 }

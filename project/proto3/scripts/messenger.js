@@ -3,7 +3,9 @@
 document.addEventListener("DOMContentLoaded", function() {
     console.log("DOM fully loaded and parsed");
 
-window.alert("Talk about your favorite holiday!")
+    'use strict';
+
+    // window.alert("Talk about your favorite holiday!")
 
     // Initialize Firebase
     var config = {
@@ -16,84 +18,86 @@ window.alert("Talk about your favorite holiday!")
     firebase.initializeApp(config);
 
 
-//TEST
 
-//Set a max limit of entries to 100
-dataAddQuery = myDataRef.limit(100);
+    //creating messenger prototype
 
-dataAddQuery.on('child_added', function(snapshot) {
-    var message = snapshot.val();
-    displayChatMessage(message.name, message.text);
-});
+    function messenger() {
+        //calling elements by Id into variable
+        this.messageList = document.getElementById('messages');
+        this.messageForm = document.getElementById('message-form');
+        this.messageInput = document.getElementById('message');
+        this.submitButton = document.getElementById('submit');
+        this.submitImageButton = document.getElementById('submitImage');
+        this.userName = document.getElementById('user-name');
+        this.signInButton = document.getElementById('sign-in');
+        this.signOutButton = document.getElementById('sign-out');
 
-//Adds a scrollbar when 26 messages have been written so that it stays within the container
-dataRemoveQuery = myDataRef.endAt().limit(26);
+        // Saves message on form submit.
+        this.messageForm.addEventListener('submit', this.saveMessage.bind(this));
+        this.signOutButton.addEventListener('click', this.signOut.bind(this));
+        this.signInButton.addEventListener('click', this.signIn.bind(this));
 
-dataRemoveQuery.on('child_removed', function(snapshot) {
-    var message = snapshot.val();
-    removeChatMessage(message.name, message.text);
-});
-
-document.getElementById("messageInput").addEventListener("keypress",(function (e) {
-
-    //When ENTER is pressed
-    if (e.keyCode == 13) {
-        var name = document.getElementById('nameInput').value;
-
-        if (name.length > 18) {
-            alert('Please enter a shorter name'); //The alert is temporary
-        }
-        else {
-            var text = document.getElementById('messageInput').value;
-
-            if (text.length > 450) {
-                alert('Your message is too long'); //The alert is temporary
-            }
-            else {
-                myDataRef.push({name: name, text: text});
-                document.getElementById('messageInput').value = "";
-            }
-        }
+        this.initFirebase();
     }
-}))
 
-function displayChatMessage(name, text) {
+    messenger.prototype.initFirebase = function() {
+        // Shortcuts to Firebase SDK features.
+        this.auth = firebase.auth();
+        this.database = firebase.database();
+        this.storage = firebase.storage();
+        // Initiates Firebase auth and listen to auth state changes.
+        this.auth.onAuthStateChanged(this.onAuthStateChanged.bind(this));
+    };
 
-  var newMessage = document.createElement("div");
-  newMessage.innerHTML = "<b>" + name + "</b> : " + text;
-  document.getElementById("messagesDiv").appendChild(newMessage);
-}
+    // Loads chat messages history and listens for upcoming ones.
+FriendlyChat.prototype.loadMessages = function() {
+  // Reference to the /messages/ database path.
+  this.messagesRef = this.database.ref('messages');
+  // Make sure we remove all previous listeners.
+  this.messagesRef.off();
 
-function removeChatMessage(name, text) {
-  document.getElementById("messagesDiv").removeChild(document.getElementById("messagesDiv").firstChild)
+  // Loads the last 12 messages and listen for new ones.
+  var setMessage = function(data) {
+    var val = data.val();
+    this.displayMessage(data.key, val.name, val.text, val.photoUrl, val.imageUrl);
+  }.bind(this);
+  this.messagesRef.limitToLast(12).on('child_added', setMessage);
+  this.messagesRef.limitToLast(12).on('child_changed', setMessage);
+};
 
-}
+// Saves a new message on the Firebase DB.
+FriendlyChat.prototype.saveMessage = function(e) {
+  e.preventDefault();
+  // Check that the user entered a message and is signed in.
+  if (this.messageInput.value && this.checkSignedInWithMessage()) {
+    var currentUser = this.auth.currentUser;
+    // Add a new message entry to the Firebase Database.
+    this.messagesRef.push({
+      name: currentUser.displayName,
+      text: this.messageInput.value,
+    }).then(function() {
+      // Clear message text field and SEND button state.
+      FriendlyChat.resetMaterialTextfield(this.messageInput);
+      this.toggleButton();
+    }.bind(this)).catch(function(error) {
+      console.error('Error writing new message to Firebase Database', error);
+    });
+  }
+};
 
 
+// Signin
+FriendlyChat.prototype.signIn = function() {
+  // Sign in Firebase using popup auth and Google as the identity provider.
+  var provider = new firebase.auth.GoogleAuthProvider();
+  this.auth.signInWithPopup(provider);
+};
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// Signsout
+FriendlyChat.prototype.signOut = function() {
+  // Sign out of Firebase.
+  this.auth.signOut();
+};
 
 
 
