@@ -1,0 +1,256 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400');
+
+/* CSS Document */
+
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+
+/* HTML5 display-role reset for older browsers */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+/* ===== CSS START ===== */
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 200;
+    padding: 3% 5%;
+    color: #ffffff;
+}
+
+.container {
+    width: 375px;
+    height: 667px;
+    overflow: scroll;
+    margin: auto;
+    background-color: lightgrey;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+h1 {
+    font-size: 20pt;
+    margin: 10px 0px;
+}
+
+h2 {
+    font-size: 40pt;
+    margin-bottom: 40px;
+		margin-top:50px;
+}
+
+h3 {
+    font-size: 25pt;
+    margin-top: 5px;
+}
+
+h4{
+  font-size: 20pt
+}
+
+p {
+    font-size: 10pt;
+}
+
+a {
+    color: #ffffff;
+    text-decoration: none;
+
+}
+
+.center{
+	text-align: center;
+	margin: auto;
+
+}
+
+/*===== LOGIN ====*/
+
+.login {
+    font-size: 45pt;
+    text-align: center;
+    margin: 30px 10px;
+    margin-top: 100px;
+}
+
+#loginform {
+    text-align: center;
+    margin: auto;
+    width: 200px;
+}
+
+.logininput{
+    margin-bottom: 20px;
+    width: 200px;
+    background: none;
+    border: none;
+    border-bottom: 1px solid #ffffff;
+    color: #ffffff;
+		font-family: 'Source Sans Pro', sans-serif;
+		font-weight: 200;
+		font-size: 15pt;
+}
+
+#loginbtn {
+	border: 1px solid #ffffff;
+	width:70px;
+	margin-top:10px;
+	background: none;
+	color:#ffffff;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 200;
+	font-size: 15pt;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #ffffff;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 200;
+	font-size: 15pt;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: #ffffff;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: #ffffff;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: #ffffff;
+}
+
+
+/*===== MAIN MENU ====*/
+
+.greeting {
+    font-size: 40pt;
+    text-align: center;
+    margin: 30px 10px;
+    margin-top: 35px;
+}
+
+#greetshadow {
+    height: 206px;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+.maingradient {
+    background: linear-gradient(#5ec3ea, #926aff);
+}
+
+#main ul li a {
+    display: block;
+    text-decoration: none;
+    font-size: 30pt;
+    padding: 25px;
+    /*border-top:1px solid white ;
+	border-bottom:1px solid white;*/
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+/*===== INBOX ====*/
+
+header a{
+	text-decoration: none;
+	font-size: 20pt;
+	padding-left:15px;
+	margin-top: -5px;
+	position:fixed;
+
+}
+
+#inbox ul li a {
+    display: block;
+    text-decoration: none;
+    font-size: 30pt;
+    padding: 5px 10px;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+img {
+    margin-right: 15px;
+}
+
+.flexwrap {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+/*===== NEWS ====*/
+
+article{
+  padding:15px;
+}
+
+article p{
+  margin-top:15px;
+
+}
+
+.mailicon{
+  margin:auto;
+  margin-top:0px;
+
+
+}
+
+/*===== CHAT ====*/
+
+main{
+  height:400px;
+  width:99%;
+  background-color: #ffffff;
+  margin:auto;
+  border-radius: 5px;
+}
+
+#messages{
+  height:300px;
+  background-color:lightblue;
+
+}
+
+#msginput{
+  width:300px;
+}
