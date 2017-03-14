@@ -323,3 +323,9 @@ main{
 	font-size: 15pt;
 
 }
+
+/*===== CHAT ====*/
+
+#langselect{
+  margin-top:20px;
+}
