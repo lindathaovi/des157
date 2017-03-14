@@ -5,28 +5,28 @@ document.addEventListener("DOMContentLoaded", function() {
 
     'use strict';
 
-
-    // Initialize Firebase
-    var config = {
-        apiKey: "AIzaSyBdc14fdv04F8RRHqHxS3uwnDVkSlSyH2g",
-        authDomain: "des157socialcue.firebaseapp.com",
-        databaseURL: "https://des157socialcue.firebaseio.com",
-        storageBucket: "des157socialcue.appspot.com",
-        messagingSenderId: "75103703696"
-    };
-    firebase.initializeApp(config);
+    //
+    // // Initialize Firebase
+    // var config = {
+    //     apiKey: "AIzaSyBdc14fdv04F8RRHqHxS3uwnDVkSlSyH2g",
+    //     authDomain: "des157socialcue.firebaseapp.com",
+    //     databaseURL: "https://des157socialcue.firebaseio.com",
+    //     storageBucket: "des157socialcue.appspot.com",
+    //     messagingSenderId: "75103703696"
+    // };
+    // firebase.initializeApp(config);
 
 
 
     //creating messenger prototype
 
     function messenger() {
-        //calling elements by Id into variable
+      this.checkSetup();
+        //calling elements by Id into variables
         this.messageList = document.getElementById('messages');
         this.messageForm = document.getElementById('message-form');
         this.messageInput = document.getElementById('message');
         this.submitButton = document.getElementById('submit');
-        this.submitImageButton = document.getElementById('submitImage');
         this.userName = document.getElementById('user-name');
         this.signInButton = document.getElementById('sign-in');
         this.signOutButton = document.getElementById('sign-out');
