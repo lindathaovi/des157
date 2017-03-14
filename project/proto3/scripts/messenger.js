@@ -5,7 +5,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
     'use strict';
 
-    // window.alert("Talk about your favorite holiday!")
 
     // Initialize Firebase
     var config = {
