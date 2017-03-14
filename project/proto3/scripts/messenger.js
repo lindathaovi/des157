@@ -91,6 +91,7 @@ messenger.prototype.signIn = function() {
   // Sign in Firebase using popup auth and Google as the identity provider.
   var provider = new firebase.auth.GoogleAuthProvider();
   this.auth.signInWithPopup(provider);
+  signInSuccessUrl: 'index.html'
 };
 
 // Signsout
@@ -98,6 +99,54 @@ messenger.prototype.signOut = function() {
   // Sign out of Firebase.
   this.auth.signOut();
 };
+
+messenger.prototype.onAuthStateChanged = function(user) {
+  if (user) { // User is signed in!
+    // Get profile pic and user's name from the Firebase user object.
+    var userName = user.displayName;
+
+    // Set the user's  name.
+    this.userName.textContent = userName;
+
+
+    // We load currently existing chant messages.
+    this.loadMessages();
+
+    // We save the Firebase Messaging Device token and enable notifications.
+    this.saveMessagingDeviceToken();
+  } else { // User is signed out!
+    // Hide user's profile and sign-out button.
+    this.userName.setAttribute('hidden', 'true');
+    this.userPic.setAttribute('hidden', 'true');
+    this.signOutButton.setAttribute('hidden', 'true');
+
+    // Show sign-in button.
+    this.signInButton.removeAttribute('hidden');
+  }
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
