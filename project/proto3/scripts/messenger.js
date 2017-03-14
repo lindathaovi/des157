@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function() {
     };
 
     // Loads chat messages history and listens for upcoming ones.
-FriendlyChat.prototype.loadMessages = function() {
+messenger.prototype.loadMessages = function() {
   // Reference to the /messages/ database path.
   this.messagesRef = this.database.ref('messages');
   // Make sure we remove all previous listeners.
@@ -59,14 +59,14 @@ FriendlyChat.prototype.loadMessages = function() {
   // Loads the last 12 messages and listen for new ones.
   var setMessage = function(data) {
     var val = data.val();
-    this.displayMessage(data.key, val.name, val.text, val.photoUrl, val.imageUrl);
+    this.displayMessage(data.key, val.name, val.text,);
   }.bind(this);
   this.messagesRef.limitToLast(12).on('child_added', setMessage);
   this.messagesRef.limitToLast(12).on('child_changed', setMessage);
 };
 
 // Saves a new message on the Firebase DB.
-FriendlyChat.prototype.saveMessage = function(e) {
+messenger.prototype.saveMessage = function(e) {
   e.preventDefault();
   // Check that the user entered a message and is signed in.
   if (this.messageInput.value && this.checkSignedInWithMessage()) {
@@ -77,7 +77,7 @@ FriendlyChat.prototype.saveMessage = function(e) {
       text: this.messageInput.value,
     }).then(function() {
       // Clear message text field and SEND button state.
-      FriendlyChat.resetMaterialTextfield(this.messageInput);
+      messenger.resetMaterialTextfield(this.messageInput);
       this.toggleButton();
     }.bind(this)).catch(function(error) {
       console.error('Error writing new message to Firebase Database', error);
@@ -87,14 +87,14 @@ FriendlyChat.prototype.saveMessage = function(e) {
 
 
 // Signin
-FriendlyChat.prototype.signIn = function() {
+messenger.prototype.signIn = function() {
   // Sign in Firebase using popup auth and Google as the identity provider.
   var provider = new firebase.auth.GoogleAuthProvider();
   this.auth.signInWithPopup(provider);
 };
 
 // Signsout
-FriendlyChat.prototype.signOut = function() {
+messenger.prototype.signOut = function() {
   // Sign out of Firebase.
   this.auth.signOut();
 };
