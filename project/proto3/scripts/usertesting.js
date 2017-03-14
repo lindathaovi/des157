@@ -3,7 +3,18 @@
 document.addEventListener("DOMContentLoaded", function() {
     console.log("DOM fully loaded and parsed");
 
-    window.alert("Hello There! Welcome to SocialCue. Thank you for testing out this app! Please be aware that the app is not fully functional. Some features are still being worked out including the messenger!");
+        window.onload = usertesting;
+
+        var loginpop = document.getElementById('loginpop');
+        var close = document.getElementById('close');
+
+        function usertesting() {
+            loginpop.style.display = 'block';
+            close.addEventListener('click', function() {
+                loginpop.style.display = 'none';
+            });
+
+        }
 
 
 });
