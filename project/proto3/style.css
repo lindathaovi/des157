@@ -161,6 +161,22 @@ a {
   color: #ffffff;
 }
 
+#loginpop, #logoutpop{
+  position: absolute;
+  margin:auto;
+  margin-left:35px;
+  margin-top:10px;
+  border-radius: 20px;
+  background:#ffffff;
+  color:#926aff;
+
+  width:300px;
+  display: none;
+  line-height: 18px;
+  letter-spacing: .9px;
+
+}
+
 
 /*===== MAIN MENU ====*/
 
