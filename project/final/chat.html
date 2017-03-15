@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>SocialCue</title>
+    <link href="style.css" rel="stylesheet" />
+    <script src='scripts/messenger.js' type="text/javascript"></script>
+    <script src='scripts/script.js' type="text/javascript"></script>
+
+
+</head>
+
+<body>
+    <div class='container maingradient'>
+        <header>
+
+            <a href='inbox.html'>
+                <</a>
+                    <h1>SocialCue</h1>
+        </header>
+
+        <a href='profile.html'><h2>Jane Doe</h2></a>
+        <p class='center'>Messenger to be constructed</p>
+
+        <main>
+
+          <div id=promptpop>
+            <p id='close'>X</p>
+            <p id='promptText'>
+              Talk about what your plans are for today!
+            </p>
+          </div>
+
+            <!-- messages -->
+            <div id='messagebubble'>
+
+                <div id='messages'></div>
+            </div>
+
+            <!-- message input box -->
+            <form id='message-form'>
+                <textarea name="originalMsg" id='message'></textarea>
+
+                <input type="submit" value="send" id='submit' />
+            </form>
+
+
+
+    </main>
+
+
+
+
+
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/3.7.1/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+          apiKey: "AIzaSyBdc14fdv04F8RRHqHxS3uwnDVkSlSyH2g",
+          authDomain: "des157socialcue.firebaseapp.com",
+          databaseURL: "https://des157socialcue.firebaseio.com",
+          storageBucket: "des157socialcue.appspot.com",
+          messagingSenderId: "75103703696"
+      };
+      firebase.initializeApp(config);
+    </script>
+</body>
+
+</html>
