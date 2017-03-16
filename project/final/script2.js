@@ -46,6 +46,7 @@ document.addEventListener("DOMContentLoaded", function() {
     var newmsgSubmit = document.getElementById('newmsg-submit');
     var newpalbtn = document.getElementById('newpalbtn');
     var newpalSubmit = document.getElementById('newpal-submit');
+    var iconmailbtn = document.getElementById('iconmailbtn');
 
     //pop upu windows
     var prompt = document.getElementById('promptpop');
@@ -54,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function() {
     var onboardingclose = document.getElementById('onboardingclose');
     var palclose = document.getElementById('palclose');
 
-
+//message form
 
 
     //FORM SUBMIT
@@ -311,8 +312,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
+var profilePage = document.getElementById(profile-page);
 
 
+iconmailbtn.addEventListener('click', function() { //close form
+    penPage.style.display = 'none';
+    profilelPage.style.display = 'block';
+});
 
 
 

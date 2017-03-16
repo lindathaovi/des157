@@ -624,3 +624,7 @@ main{
   position:fixed;
   margin-left: 270px;
 }
+
+#profile-page{
+  display: none;
+}
