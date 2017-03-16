@@ -284,6 +284,7 @@ a {
 
 #inbox-page{
   display: none;
+  margin-bottom:70px;
 }
 
 .arrownav{
@@ -322,11 +323,14 @@ img {
 
 #news-page{
   display:none;
+  overflow: hidden;
+  height:610px;
 }
 
 #news-page article{
   padding:15px;
-  height:667px;
+  height:610px;
+
 }
 
 #news-page article h3{
@@ -389,7 +393,7 @@ main{
   padding:15px;
 }
 
-#close, #msgclose, #onboardingclose{
+#close, #msgclose, #onboardingclose, #palclose{
   text-align: right;
   padding-right: 15px;
   padding-top:10px;
@@ -439,6 +443,24 @@ main{
   display:none;
 }
 
+#newpal-page{
+  position: absolute;
+  margin:auto;
+  margin-left:40px;
+  margin-top:200px;
+  border-radius: 10px;
+  background: #ffffff;
+  height:340px;
+  width:300px;
+  color:#5ec3ea;
+  display:none;
+}
+
+#newpal-page h3{
+  text-align: center;
+  margin-top:10px;
+}
+
 #penpal-page p{
   margin-bottom:25px;
 }
@@ -449,6 +471,14 @@ main{
     font-size: 30pt;
     padding: 5px 10px;
     box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+#newpalbtn{
+  position:absolute;
+  /*margin-left: 270px;*/
+  /*margin-top:-75px;*/
+  margin-left:295px;
+  margin-top:-115px;
 }
 
 
@@ -467,6 +497,7 @@ main{
 
 #friends-page{
   display:none;
+  margin-bottom: 70px;
 }
 
 /*===== SETTINGS ====*/
@@ -492,7 +523,7 @@ main{
   margin-top:200px;
   border-radius: 10px;
   background: #ffffff;
-  height:310px;
+  height:330px;
   width:300px;
   color:#5ec3ea;
   display:none;
@@ -523,7 +554,7 @@ main{
   font-size:12pt;
 }
 
-#newmsg-submit{
+#newmsg-submit, #newpal-submit{
   border: none;
   border-radius: 20px;
   width:60px;

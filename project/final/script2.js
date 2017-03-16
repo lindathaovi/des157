@@ -20,6 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
     var langsettingsPage = document.getElementById('langsettings-page');
     var newmsgPage = document.getElementById('newmsg-page');
     var onboardingPage = document.getElementById('onboarding-page');
+    var newpalPage = document.getElementById('newpal-page');
 
     //Buttons
     //main menu buttons
@@ -43,12 +44,15 @@ document.addEventListener("DOMContentLoaded", function() {
     //misc buttons
     var newmsgbtn = document.getElementById('newmsgbtn'); //create new message
     var newmsgSubmit = document.getElementById('newmsg-submit');
+    var newpalbtn = document.getElementById('newpalbtn');
+    var newpalSubmit = document.getElementById('newpal-submit');
 
     //pop upu windows
     var prompt = document.getElementById('promptpop');
     var close = document.getElementById('close');
     var msgclose = document.getElementById('msgclose');
     var onboardingclose = document.getElementById('onboardingclose');
+    var palclose = document.getElementById('palclose');
 
 
 
@@ -79,7 +83,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         onboardingclose.addEventListener('click', function() {
             onboardingPage.style.display = 'none';
-          });
+        });
 
 
 
@@ -172,7 +176,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
     //fixed nav buttons
 
-
     //to home
     navHomebtn.addEventListener('click', function() { //from inbox
         inboxPage.style.display = "none";
@@ -201,6 +204,7 @@ document.addEventListener("DOMContentLoaded", function() {
     navHomebtn.addEventListener('click', function() { //from settings
         settingsPage.style.display = "none";
         penpalPage.style.display = "none";
+        chatPage.style.display = 'none';
         menuPage.style.display = "block";
         fixedNav.style.display = "none";
         header.style.display = 'block';
@@ -291,8 +295,18 @@ document.addEventListener("DOMContentLoaded", function() {
 
     });
 
+    //show form for new pen pal
+    newpalbtn.addEventListener('click', function() {
+        newpalPage.style.display = "block";
+    });
 
+    palclose.addEventListener('click', function() { //close form
+        newpalPage.style.display = 'none';
+    });
 
+    newpalSubmit.addEventListener('click', function() { //close form
+        newpalPage.style.display = 'none';
+    });
 
 
 
