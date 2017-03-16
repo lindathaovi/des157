@@ -48,6 +48,7 @@ document.addEventListener("DOMContentLoaded", function() {
     var newpalSubmit = document.getElementById('newpal-submit');
     //firebase buttons
     var signInButton = document.getElementById("sign-in-button");
+    var signOutButton = document.getElementById("sign-out-button");
 
     //user
     var greeting = document.getElementById('greeting');
@@ -68,6 +69,15 @@ document.addEventListener("DOMContentLoaded", function() {
 
         var provider = new firebase.auth.GoogleAuthProvider();
         firebase.auth().signInWithRedirect(provider);
+
+    });
+
+    signOutButton.addEventListener('click', function(){
+
+      firebase.auth().signOut();
+      loginPage.style.display = "block";
+      homePage.style.display = "none";
+      header.style.display = "none";
 
     });
 
