@@ -41,20 +41,23 @@ document.addEventListener("DOMContentLoaded", function() {
     var langbackbtn = document.getElementById('lang-backbtn');
     //misc buttons
     var newmsgbtn = document.getElementById('newmsgbtn'); //create new message
+    var newmsgSubmit = document.getElementById('newmsg-submit');
 
     //pop upu windows
     var prompt = document.getElementById('promptpop');
     var close = document.getElementById('close');
+    var msgclose = document.getElementById('msgclose');
 
 
 
 
     //FORM SUBMIT
     document.login.onsubmit = processLogin;
-    // document.newmsgForm.onsubmit = processNewmsg;
+    
 
     function processLogin() {
         var userName = document.login.userName.value;
+
 
         //alert if no username is inserted
         // if(userName == ''){
@@ -74,22 +77,6 @@ document.addEventListener("DOMContentLoaded", function() {
         //insert name in menupage greeting
         var greeting = document.getElementById('greeting');
         greeting.innerHTML = 'Good Evening, ' + userName;
-
-        return false; //prevent page from reloading
-    }
-
-    function processNewMsg() {
-        var newMsg = document.newmsgForm.newMsg.value;
-
-      //  alert if no msg is inserted
-        if(newMsg == ''){
-          alert('Please enter a message');
-
-          return false;
-        }
-
-        //hide form
-        newmsgPage.style.display = 'none';
 
         return false; //prevent page from reloading
     }
@@ -281,6 +268,17 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     //show form for create new message button
+    newmsgbtn.addEventListener('click', function() {
+        newmsgPage.style.display = "block";
+    });
+    msgclose.addEventListener('click', function() { //close form
+        newmsgPage.style.display = 'none';
+    });
+
+    newmsgSubmit.addEventListener('click', function() { //close form
+        newmsgPage.style.display = 'none';
+
+    });
 
 
 

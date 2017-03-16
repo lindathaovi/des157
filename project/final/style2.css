@@ -381,7 +381,7 @@ main{
   padding:15px;
 }
 
-#close{
+#close, #msgclose{
   text-align: right;
   padding-right: 15px;
   padding-top:10px;
