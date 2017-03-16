@@ -82,7 +82,7 @@ document.addEventListener("DOMContentLoaded", function() {
             var uid = user.uid;
             var providerData = user.providerData;
 
-            greeting.innerHTML = 'Good Evening, ' + userName;
+            greeting.innerHTML = 'Good Evening, ' + user.displayName;
             userId = user.uid;
             userName = user.displayName;
             console.log(userId);
@@ -92,11 +92,11 @@ document.addEventListener("DOMContentLoaded", function() {
                 loginPage.style.display = "none";
                 menuPage.style.display = "block";
                 header.style.display = "block";
-                
+
             }
 
         } else {
-            currentUser.innerHTML = "null";
+            currentUser.innerHTML = "Stranger";
 
         }
     });
