@@ -536,7 +536,7 @@ main{
   margin-top:10px;
 }
 
-#newmsg-form{
+#newmsg-form, #newpal-form{
   margin-top:25px;
   text-align: center;
 }
