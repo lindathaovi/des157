@@ -89,9 +89,14 @@ document.addEventListener("DOMContentLoaded", function() {
             writeUserData(uid, displayName, email, photoURL);
 
             if (userName != "null") {
-                loginPage.style.display = "none";
-                menuPage.style.display = "block";
-                header.style.display = "block";
+              loginPage.style.display = 'none';
+              menuPage.style.display = 'block';
+              header.style.display = 'block';
+              onboardingPage.style.display = 'block'
+
+              onboardingclose.addEventListener('click', function() {
+                  onboardingPage.style.display = 'none';
+              });
 
             }
 
@@ -108,46 +113,6 @@ document.addEventListener("DOMContentLoaded", function() {
             profile_picture: imageUrl
         });
     }
-
-
-    //FORM SUBMIT
-    document.login.onsubmit = processLogin;
-
-
-    function processLogin() {
-        var userName = document.login.userName.value;
-
-
-        //alert if no username is inserted
-        // if(userName == ''){
-        //   alert('Please enter a valid username');
-        //
-        //   return false;
-        // }
-
-
-        //NAVIGATION
-
-        //display menu page and hide login
-        loginPage.style.display = 'none';
-        menuPage.style.display = 'block';
-        header.style.display = 'block';
-        onboardingPage.style.display = 'block'
-
-        onboardingclose.addEventListener('click', function() {
-            onboardingPage.style.display = 'none';
-        });
-
-
-
-        //insert name in menupage greeting
-
-
-
-        return false; //prevent page from reloading
-    }
-
-
 
 
 
