@@ -49,6 +49,13 @@ document.addEventListener("DOMContentLoaded", function() {
     //firebase buttons
     var signInButton = document.getElementById("sign-in-button");
 
+    //user
+    var greeting = document.getElementById('greeting');
+    var userId;
+    var userName = "null";
+
+
+
     //pop upu windows
     var prompt = document.getElementById('promptpop');
     var close = document.getElementById('close');
@@ -57,12 +64,50 @@ document.addEventListener("DOMContentLoaded", function() {
     var palclose = document.getElementById('palclose');
 
 
-    signInButton.addEventListener('click', function(){
+    signInButton.addEventListener('click', function() {
 
-          var provider = new firebase.auth.GoogleAuthProvider();
-          firebase.auth().signInWithRedirect(provider);
+        var provider = new firebase.auth.GoogleAuthProvider();
+        firebase.auth().signInWithRedirect(provider);
 
+    });
+
+    firebase.auth().onAuthStateChanged(function(user) {
+        if (user) {
+            // User is signed in.
+            var displayName = user.displayName;
+            var email = user.email;
+            var emailVerified = user.emailVerified;
+            var photoURL = user.photoURL;
+            var isAnonymous = user.isAnonymous;
+            var uid = user.uid;
+            var providerData = user.providerData;
+
+            greeting.innerHTML = 'Good Evening, ' + userName;
+            userId = user.uid;
+            userName = user.displayName;
+            console.log(userId);
+            writeUserData(uid, displayName, email, photoURL);
+
+            if (userName != "null") {
+                loginPage.style.display = "none";
+                menuPage.style.display = "block";
+                header.style.display = "block";
+                
+            }
+
+        } else {
+            currentUser.innerHTML = "null";
+
+        }
+    });
+
+    function writeUserData(userId, name, email, imageUrl) {
+        firebase.database().ref('users/' + userId).set({
+            username: name,
+            email: email,
+            profile_picture: imageUrl
         });
+    }
 
 
     //FORM SUBMIT
@@ -96,8 +141,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
         //insert name in menupage greeting
-        var greeting = document.getElementById('greeting');
-        greeting.innerHTML = 'Good Evening, ' + userName;
+
+
 
         return false; //prevent page from reloading
     }
