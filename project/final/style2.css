@@ -139,7 +139,7 @@ a {
 
 }
 
-#fixed-nav h1{
+#fixed-nav h3{
   display:none;
 }
 
@@ -243,7 +243,7 @@ a {
 
 }
 
-#menu-page h1{
+#menu-page h3{
   display: none;
 }
 
@@ -263,7 +263,7 @@ a {
     background: linear-gradient(#5ec3ea, #926aff);
 }
 
-#main ul li  {
+.main ul li  {
     display: block;
     text-decoration: none;
     font-size: 30pt;
@@ -442,6 +442,15 @@ main{
 #penpal-page p{
   margin-bottom:25px;
 }
+
+#penpalid ul li {
+    display: block;
+    text-decoration: none;
+    font-size: 30pt;
+    padding: 5px 10px;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+}
+
 
 .namewidth{
   width:170px;
