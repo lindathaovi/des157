@@ -73,6 +73,7 @@ h1, h2 {
 
 h1 {
     font-size: 20pt;
+    font-weight: 400;
     margin: 10px 0px;
 }
 
@@ -180,7 +181,7 @@ a {
 
 /*===== MAIN MENU ====*/
 
-.greeting {
+#greeting {
     font-size: 40pt;
     text-align: center;
     margin: 30px 10px;
