@@ -17,6 +17,46 @@
             <h1>SocialCue</h1>
         </header>
 
+        <section id='fixed-nav' class='flexwrap'>
+          <ul>
+            <li id='nav-homebtn'>
+              Home
+            </li>
+            <li id='nav-inboxbtn'>
+              Inbox
+              <!-- <img src='images/navinbox.png' /> -->
+            </li>
+            <li id='nav-penpalsbtn'>
+              Penpals
+            </li>
+            <li id='nav-friendsbtn'>
+              Friends
+            </li>
+            <li id='nav-newsbtn'>
+              News
+            </li>
+          </ul>
+
+
+        </section>
+
+        <section id='newmsg-page'>
+          <p class='close'>X</p>
+          <h3>New Message</h3>
+
+          <form name='newmsgForm' id='newmsg-form'>
+            <div>
+                <label>To: </label>
+                <input type="text" name="recipient">
+            </div>
+            <textarea name="newMsg"></textarea>
+            <br />
+            <input type="submit" value="send" id="newmsg-submit" />
+
+          </form>
+
+        </section>
+
         <section id='login-page'>
 
             <h1 id='loginLogo'>SocialCue</h1>
@@ -30,7 +70,6 @@
                 <input type="submit" class='button' id='loginbtn' value="login" />
             </form>
         </section>
-
 
 
         <section id='menu-page'>
@@ -59,31 +98,33 @@
         </section>
 
 
-
         <section id='inbox-page'>
-            <h2>Messages</h2>
+
+            <h2>Inbox </h2><div>
+
+          <div id='newmsgbtn'><img src='images/newmsg.png' alt='new msg icon' /></div>
+
 
 
             <section id='inbox'>
 
-                <ul id='chatroombtn'>
-                    <li >
-
+                <ul>
+                    <li id='chatroombtn'>
                         <div class='flexwrap'>
-                            <img src='images/usericon.png' alt='icon' />
+                            <img src='images/user1.png' alt='icon' />
                             <div>
-                                <h3>Jane Doe</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dui augue, pretium vitae fringilla ut, tempus in nunc.</p>
+                                <h3>Xuan Tran</h3>
+                                <p>I just ate dinner with my family. What did you do today?</p>
                             </div>
                         </div>
                     </li>
 
                     <li>
                         <div class='flexwrap'>
-                            <img src='images/usericon.png' alt='icon' />
+                            <img src='images/user2.png' alt='icon' />
                             <div>
-                                <h3>Jan Doe</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dui augue, pretium vitae fringilla ut, tempus in nunc.</p>
+                                <h3>Jane Oliver</h3>
+                                <p>It's raining here today. How is it looking over there?</p>
                             </div>
                         </div>
                     </li>
@@ -134,10 +175,12 @@
         </section>
 
 
-
         <section id='chat-page'>
-            <a href='profile.html'><h2>Jane Doe</h2></a>
-            <p class='center'>Messenger to be constructed</p>
+
+            <img src='images/leftarrow.png' alt='nav' id='chat-backbtn' class='arrownav'/>
+
+            <h2>Xuan Tran</h2>
+
 
             <main>
 
@@ -160,14 +203,321 @@
 
                     <input type="submit" value="send" id='submit' />
                 </form>
-
-
-
             </main>
+        </section>
 
+
+        <section id='penpal-page'>
+            <h2>Penpals</h2>
+            <p class='center'>You have reached your maximum of 4 active penpals.</p>
+
+            <section id='inbox'>
+
+                <ul>
+                    <li>
+                        <div class='flexwrap'>
+                            <img src='images/user1.png' alt='icon' />
+                            <div class='namewidth'>
+                                <h3>Xuan Tran</h3>
+                                <p>Vietnam</p>
+                            </div>
+
+                            <div class="mailicon">
+                                <img src='images/mailicon.png' alt='mailicon' />
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class='flexwrap'>
+                            <img src='images/usericon.png' alt='icon' />
+                            <div class='namewidth'>
+                                <h3>Catherine</h3>
+                                <p>Vietnam</p>
+                            </div>
+
+                            <div class="mailicon">
+                                <img src='images/mailicon.png' alt='mailicon' />
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class='flexwrap'>
+                            <img src='images/usericon.png' alt='icon' />
+                            <div class='namewidth'>
+                                <h3>James</h3>
+                                <p>Austrailia</p>
+                            </div>
+
+                            <div class="mailicon">
+                                <img src='images/mailicon.png' alt='mailicon' />
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <a href='profile.html'>
+                            <div class='flexwrap'>
+                                <img src='images/usericon.png' alt='icon' />
+                                <div class='namewidth'>
+                                    <h3>Jack </h3>
+                                    <p>Italy</p>
+                                </div>
+
+                                <div class="mailicon">
+                                    <img src='images/mailicon.png' alt='mailicon' />
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+
+
+
+                </ul>
+            </section>
+
+        </section>
+
+
+        <section id='friends-page'>
+            <h2>Friends</h2>
+            <p class='center'>Friends that you've made from Pen Pals</p><br /><br />
+
+            <section id='inbox'>
+
+                <ul>
+                    <li>
+                        <a href='profile.html'>
+                            <div class='flexwrap'>
+                                <img src='images/usericon.png' alt='icon' />
+                                <div class='namewidth'>
+                                    <h3>Jol Nguyen</h3>
+                                    <p>Vietnam</p>
+                                </div>
+
+                                <div class="mailicon">
+                                    <img src='images/mailicon.png' alt='mailicon' />
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href='profile.html'>
+                            <div class='flexwrap'>
+                                <img src='images/user2.png' alt='icon' />
+                                <div class='namewidth'>
+                                    <h3>Jane Oliver</h3>
+                                    <p>France</p>
+                                </div>
+
+                                <div class="mailicon">
+                                    <img src='images/mailicon.png' alt='mailicon' />
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href='profile.html'>
+                            <div class='flexwrap'>
+                                <img src='images/usericon.png' alt='icon' />
+                                <div class='namewidth'>
+                                    <h3>Emily Green</h3>
+                                    <p>China</p>
+                                </div>
+
+                                <div class="mailicon">
+                                    <img src='images/mailicon.png' alt='mailicon' />
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href='profile.html'>
+                            <div class='flexwrap'>
+                                <img src='images/usericon.png' alt='icon' />
+                                <div class='namewidth'>
+                                    <h3>Kathy Black</h3>
+                                    <p>Hong Kong</p>
+                                </div>
+
+                                <div class="mailicon">
+                                    <img src='images/mailicon.png' alt='mailicon' />
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href='profile.html'>
+                            <div class='flexwrap'>
+                                <img src='images/usericon.png' alt='icon' />
+                                <div class='namewidth'>
+                                    <h3>Alice Pink</h3>
+                                    <p>Philiphines</p>
+                                </div>
+
+                                <div class="mailicon">
+                                    <img src='images/mailicon.png' alt='mailicon' />
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href='profile.html'>
+                            <div class='flexwrap'>
+                                <img src='images/usericon.png' alt='icon' />
+                                <div class='namewidth'>
+                                    <h3>Willow Dot</h3>
+                                    <p>Japan</p>
+                                </div>
+
+                                <div class="mailicon">
+                                    <img src='images/mailicon.png' alt='mailicon' />
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+
+                </ul>
+
+            </section>
+        </section>
+
+
+        <section id='news-page'>
+            <h2>News</h2>
+
+            <p class='center'>Keep up with the current events where your penpals are!</p>
+
+            <article id='article1'>
+                <h3>Colour-coded food labels</h3>
+                <h4>Paris, France</h4>
+
+                <p>The Local | March 15, 2017</p>
+                <p>Usually you're told to read the small print, but soon it won't be necessary - at least if we're talking about the list of ingredients on the back of supermarket items.</p>
+                <p>The idea was revealed by France's health minister in May last year, and was tested in sixty supermarkets across the country.</p>
+                <p>When the colour-coded system - called the "Nutri-score" - is rolled out in April, it will see selected foods and drinks ranked on a scale of A to E, with the colours ranging from dark green to red.</p>
+                <p>If a product is labelled with a Green A then you can rest assured you've chosen the healthy alternative.</p>
+
+                <p><a href='https://www.thelocal.fr/20170315/colour-coded-groceries-get-green-light-in-france' target="_blank" class='readmore'>read more...</a></p>
+
+                <div>
+                    <a href='#article2'><img src='images/downarrow.png' class='center' /></a>
+                </div>
+            </article>
+
+            <article id='article2'>
+                <div>
+                    <a href='#news-page'><img src='images/uparrow.png' class='center' /></a>
+                </div>
+                <h3>Family Cinema opens in Kabul</h3>
+                <h4>Kabul, Afghanistan</h4>
+
+                <p>Author Name | Date</p>
+                <p>
+                    Hello there! This is meant to be the news section which would display a variety of global news that are related to your penpals and friends. Use this section to learn more about current events related to your penpal! This gives you topics to talk about
+                    and provides a further understanding about what's going on somewhere other than where you are.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dui augue, pretium vitae fringilla ut, tempus in nunc.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dui augue, pretium vitae fringilla ut, tempus in nunc.Lorem ipsum dolor sit
+                    amet, consectetur adipiscing elit. Duis dui augue, pretium vitae fringilla ut, tempus in nunc.
+                </p>
+
+                <p><a href='http://www.france24.com/en/20170316-afghans-find-escape-family-cinema-opens-kabul' target="_blank" class='readmore'>read more...</a></p>
+
+                <div>
+                    <a href='#article3'><img src='images/downarrow.png' class='center' /></a>
+                </div>
+            </article>
+
+            <article id='article3'>
+                <div>
+                    <a href='#news-page'><img src='images/uparrow.png' class='center' /></a>
+                </div>
+                <h3>Heading</h3>
+                <h4>City, Country</h4>
+
+                <p>Author Name | Date</p>
+                <p>
+                    Hello there! This is meant to be the news section which would display a variety of global news that are related to your penpals and friends. Use this section to learn more about current events related to your penpal! This gives you topics to talk about
+                    and provides a further understanding about what's going on somewhere other than where you are.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dui augue, pretium vitae fringilla ut, tempus in nunc.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dui augue, pretium vitae fringilla ut, tempus in nunc.Lorem ipsum dolor sit
+                    amet, consectetur adipiscing elit. Duis dui augue, pretium vitae fringilla ut, tempus in nunc.
+                </p>
+
+                <p><a href='#' target="_blank" class='readmore'>read more...</a></p>
+
+                <div>
+                    <a href='#article4'><img src='images/downarrow.png' class='center' /></a>
+                </div>
+            </article>
+
+            <article id='article4'>
+                <div>
+                    <a href='#news-page'><img src='images/uparrow.png' class='center' /></a>
+                </div>
+                <h3>Heading</h3>
+                <h4>City, Country</h4>
+
+                <p>Author Name | Date</p>
+                <p>
+                    Hello there! This is meant to be the news section which would display a variety of global news that are related to your penpals and friends. Use this section to learn more about current events related to your penpal! This gives you topics to talk about
+                    and provides a further understanding about what's going on somewhere other than where you are.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dui augue, pretium vitae fringilla ut, tempus in nunc.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dui augue, pretium vitae fringilla ut, tempus in nunc.Lorem ipsum dolor sit
+                    amet, consectetur adipiscing elit. Duis dui augue, pretium vitae fringilla ut, tempus in nunc.
+                </p>
+
+                <p><a href='#' target="_blank" class='readmore'>read more...</a></p>
+
+            </article>
+        </section>
+
+
+        <section id='settings-page'>
+            <h2>Settings</h2>
+
+            <nav id='main'>
+
+                <ul>
+                    <li>Profile</li>
+                    <li id='languagebtn'>Language</li>
+                    <li>Notifications</li>
+                    <li id='clicklogout'>Logout</li>
+                </ul>
+            </nav>
+
+        </section>
+
+
+        <section id='langsettings-page'>
+            <img src='images/leftarrow.png' alt='nav' id='lang-backbtn' class='arrownav'/>
+            <h2>Language</h2>
+
+            <p class='center'>Select your prefered Language.</p>
+
+            <form class='center' id='langselect'>
+                <select name="cars">
+                <option value="En">English</option>
+                <option value="Fr">French</option>
+                <option value="Spn">Spanish</option>
+                <option value="vn">Vietnamese</option>
+              </select>
+            </form>
 
 
         </section>
+
+
+
 
 
 
