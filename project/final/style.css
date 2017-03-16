@@ -605,6 +605,10 @@ main{
   height:450px;
 }
 
+#onboarding-page h2{
+  display:none;
+}
+
 #hide{
   display:none;
 }
