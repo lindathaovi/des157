@@ -444,6 +444,7 @@ main{
 }
 
 #newpal-page{
+  display:none;
   position: absolute;
   margin:auto;
   margin-left:40px;
@@ -453,7 +454,7 @@ main{
   height:340px;
   width:300px;
   color:#5ec3ea;
-  display:none;
+
 }
 
 #newpal-page h3{
