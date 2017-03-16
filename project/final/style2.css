@@ -324,17 +324,17 @@ img {
   display:none;
 }
 
-article{
+#news-page article{
   padding:15px;
   height:667px;
 }
 
-article h3{
+#news-page article h3{
   font-weight: 400;
   margin-bottom: 10px;
 }
 
-article p{
+#news-page article p{
   margin-top:15px;
   line-height: 20px;
 
@@ -344,11 +344,11 @@ article p{
   text-decoration: underline;
 }
 
-article img{
+#news-page article img{
   width:50px;
 }
 
-article div{
+#news-page article div{
   text-align: center;
 }
 
@@ -389,7 +389,7 @@ main{
   padding:15px;
 }
 
-#close, #msgclose{
+#close, #msgclose, #onboardingclose{
   text-align: right;
   padding-right: 15px;
   padding-top:10px;
@@ -539,5 +539,40 @@ main{
 /*===== ONBOARDING ====*/
 
 #onboarding-page{
-  /*display:none;*/
+  display:none;
+  position: absolute;
+  margin:auto;
+  margin-left:40px;
+  margin-top:50px;
+  border-radius: 10px;
+  background: #ffffff;
+  height:450px;
+  width:300px;
+  color:#5ec3ea;
+  overflow-y:hidden;
+
+}
+
+#onboarding-page article{
+  height:450px;
+}
+
+#onboarding-page h3,h4, p{
+  margin: 15px 20px;
+}
+
+
+#onboarding-page p{
+  color:#000;
+  line-height: 15px;
+}
+
+.onboardrightbtn{
+  margin-left: 250px;
+  margin-top:-10px;
+}
+
+#onboardingclose{
+  position:fixed;
+  margin-left: 270px;
 }

@@ -19,6 +19,7 @@ document.addEventListener("DOMContentLoaded", function() {
     var settingsPage = document.getElementById('settings-page');
     var langsettingsPage = document.getElementById('langsettings-page');
     var newmsgPage = document.getElementById('newmsg-page');
+    var onboardingPage = document.getElementById('onboarding-page');
 
     //Buttons
     //main menu buttons
@@ -47,13 +48,14 @@ document.addEventListener("DOMContentLoaded", function() {
     var prompt = document.getElementById('promptpop');
     var close = document.getElementById('close');
     var msgclose = document.getElementById('msgclose');
+    var onboardingclose = document.getElementById('onboardingclose');
 
 
 
 
     //FORM SUBMIT
     document.login.onsubmit = processLogin;
-    
+
 
     function processLogin() {
         var userName = document.login.userName.value;
@@ -73,6 +75,13 @@ document.addEventListener("DOMContentLoaded", function() {
         loginPage.style.display = 'none';
         menuPage.style.display = 'block';
         header.style.display = 'block';
+        onboardingPage.style.display = 'block'
+
+        onboardingclose.addEventListener('click', function() {
+            onboardingPage.style.display = 'none';
+          });
+
+
 
         //insert name in menupage greeting
         var greeting = document.getElementById('greeting');
@@ -80,6 +89,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
         return false; //prevent page from reloading
     }
+
+
 
 
 
